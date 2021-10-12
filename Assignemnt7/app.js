@@ -22,6 +22,7 @@ class Course {
 
     setPrice( price ) {
         if ( price < 0 ) {
+            
             alert( "price is too low. insert another price" );
         }
         else {
