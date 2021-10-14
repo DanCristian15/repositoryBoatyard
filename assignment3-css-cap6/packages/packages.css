@@ -1,0 +1,68 @@
+.package a {
+    text-decoration: none;
+}
+
+.package__badge {
+    position: absolute;
+    top:10%;
+    left:40%;
+    margin: 20px;
+    z-index: 1;
+    background-color: red;
+    padding: 0.5%;
+    border-radius: 50px;
+}
+
+.package {
+    border: solid black 5px;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 60%;
+    height: 250px;
+    text-align: left;
+    padding: 20px 0 0 40px;
+    background-color: #c9ecd2;
+    display: block;
+}
+
+.package:hover,
+.package:active {
+    box-shadow: 2px 2px 5px black;
+    border: solid red 5px;
+}
+.package__title {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.package__subtitle {
+    color: rgb(216, 204, 204);
+    font-size: 20px;
+}
+
+.package__description {
+    background-color: rgba(250, 242, 242, 0.8);
+    color: black;
+    padding: 20px 20px 20px 10px;
+    width: 95%;
+    border: solid black 1px;
+}
+
+#plus { 
+    background-color: rgba(213, 255, 220, 0.95);
+}
+
+#free {
+    background-color: rgba(234, 252, 237, 0.95);
+    margin-left: 27rem;
+}
+
+#premium {
+    background-color: rgba(13, 79, 31, 0.95);
+}
+
+#premium .package__title {
+    color: white;
+}
+
