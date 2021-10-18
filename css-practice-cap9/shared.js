@@ -3,13 +3,10 @@ let selectedPlanButtons = document.querySelectorAll( '.plan button' );
 let modal = document.querySelector( '.modal' );
 let btnNo = document.querySelector( '#modal__btn--no' );
 let toggleButton = document.querySelector( '.toggle-button' );
-let mobileNav = document.querySelector( '.mobile-nav' )
-
-//btnNo.addEventListener( 'click', closeModal );
-
+let mobileNav = document.querySelector( '.mobile-nav' );
 
 for ( let i = 0; i < selectedPlanButtons.length; i++ ) {
-    selectedPlanButtons[i].addEventListener( 'click', function() {
+    selectedPlanButtons[i].addEventListener( 'click', function( ) {
         // modal.style.display = 'block';
         // backdrop.style.display = 'block';
         modal.classList.add( 'open' );
@@ -24,7 +21,7 @@ backdrop.addEventListener( 'click', function( )  {
     mobileNav.classList.remove( 'open' );
     closeModal();
 });
-if (btnNo) {
+if ( btnNo ) {
 btnNo.addEventListener( 'click', closeModal );
 }
 
