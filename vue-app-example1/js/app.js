@@ -85,7 +85,7 @@ new Vue({
             cartItem.product.inStock++;
             cartItem.quantity--;
 
-            if (cartItem.quantity == 0) {
+            if (!cartItem.quantity) {
                 this.removeItemFromCart( cartItem );
             }
         },
@@ -112,14 +112,9 @@ new Vue({
     
     computed: {
         cartTotal: function( ) {
-            let total = 0;
-
-            this.cart.items.forEach( function( item ) {
-                total += item.quantity *  item.product.price;
-
-            });
-
-            return total;
+            return this.cart.items.reduce(function(prev, next) {
+                return prev + next.product.price * next.quantity;
+            },0);
         },
 
         taxAmount: function( ) { 
@@ -134,6 +129,11 @@ new Vue({
                 minimumFractionDigits: 0
             });
             return formatter.format( value );
+        },
+
+        itemsPlural( value ) {
+            let plural =  value <= 1 ? 'item' : 'items';
+            return value + ' ' + plural;
         }
     }
 });
